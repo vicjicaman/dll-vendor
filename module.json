@@ -6,6 +6,7 @@
     "upstream": {}
   },
   "labels": {
-    "type": "npm-dll"
+    "type": "npm",
+    "subtype": "dll"
   }
 }
