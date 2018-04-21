@@ -43,20 +43,23 @@ module.exports = (env = {}) => {
   };
 
 
-  let library = pkgjson.name;
+  const safeVer = pkgjson.version.replace(/\./g, '_').replace(/-/g, '_');
+  let library = pkgjson.mountpoint + "LibraryDLL_" + safeVer;
   let filename = "[name].js";
   let devtool = 'cheap-module-source-map';
   if (__PROD__) {
-    library = "lib_[id]_[hash]";
-    filename = 'res_[id]_[hash].js';
+    library = "lib_[id]_[hash]_" + safeVer;
+    filename = 'res_[id]_[hash]_' + safeVer + '.js';
     devtool = false;
   }
 
   /****************************************************************************/
   let plugins = [
-    new ManifestPlugin(/*{
-      basePath: "/" + pkgjson.mountpoint + "/"
-    }*/),
+    new ManifestPlugin(
+      /*{
+            basePath: "/" + pkgjson.mountpoint + "/"
+          }*/
+    ),
     new webpack.DllPlugin({
       name: library,
       path: path.join(__dirname, "/dist/[name].json")
