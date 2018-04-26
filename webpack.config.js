@@ -62,11 +62,7 @@ module.exports = (env = {}) => {
 
   /****************************************************************************/
   let plugins = [
-    new ManifestPlugin(
-      /*{
-            basePath: "/" + pkgjson.mountpoint + "/"
-          }*/
-    ),
+    new ManifestPlugin(),
     new ExtractTextPlugin(extractOut),
     new webpack.DllPlugin({
       name: library,
@@ -77,6 +73,12 @@ module.exports = (env = {}) => {
         "NODE_ENV": JSON.stringify(_ENV),
         "BUILD_TARGET": JSON.stringify(_TARGET)
       }
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default']
     })
   ];
 
