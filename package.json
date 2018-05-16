@@ -31,6 +31,8 @@
     "on-build-webpack": "^0.1.0",
     "postcss-flexbugs-fixes": "^3.3.0",
     "postcss-loader": "^2.1.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "sass-loader": "^7.0.1",
     "shelljs": "^0.7.8",
     "uglifyjs-webpack-plugin": "^1.1.2",
@@ -52,7 +54,11 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "moment": "^2.20.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "reactstrap": "^6.0.1"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
 }
