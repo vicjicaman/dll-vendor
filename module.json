@@ -1,6 +1,6 @@
 {
   "fullname": "@nebulario/dll-vendor",
-  "version": "1.0.21-master",
+  "version": "1.0.23-local-ui-graph",
   "repository": {
     "url": "github.com:vicjicaman/dll-vendor.git",
     "upstream": {}
