@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/dll-vendor",
-  "version": "1.0.21-master",
+  "version": "1.0.21-local-ui-graph",
   "mountpoint": "vendor",
   "description": "Base for modules in node",
   "repository": "github.com:vicjicaman/dll-vendor.git",
