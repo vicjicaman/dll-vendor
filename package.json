@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/dll-vendor",
-  "version": "1.0.1-master",
+  "version": "1.0.0-master",
   "mountpoint": "vendor",
   "description": "Base for modules in node",
   "repository": "github.com:vicjicaman/dll-vendor.git",
@@ -25,12 +25,14 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "lodash": "^4.17.4",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.11.0",
     "nodemon-webpack-plugin": "^0.1.5",
     "npm-run-all": "^4.1.2",
     "on-build-webpack": "^0.1.0",
     "postcss-flexbugs-fixes": "^3.3.0",
     "postcss-loader": "^2.1.4",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "sass-loader": "^7.0.1",
     "shelljs": "^0.7.8",
     "uglifyjs-webpack-plugin": "^1.1.2",
@@ -42,15 +44,22 @@
     "clean": "rm -Rf ./dist",
     "build:prod": "yarn clean && webpack --config webpack.config.js --env.production ",
     "build:dev": "yarn clean && webpack --config webpack.config.js --env.development ",
-    "analyze": "webpack --config webpack.config.js --env.analyze",
-    "prepublish": "yarn build:prod"
+    "start:prod": "yarn build:prod --watch",
+    "start:dev": "yarn build:dev --watch",
+    "build:watch:prod": "yarn build:prod --watch",
+    "build:watch:dev": "yarn build:dev --watch",
+    "analyze": "webpack --config webpack.config.js --env.analyze"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-beta.2",
+    "bootstrap": "4.1.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "moment": "^2.20.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "reactstrap": "^6.4.0"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
 }

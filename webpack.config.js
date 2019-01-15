@@ -38,7 +38,7 @@ module.exports = (env = {}) => {
 
   /****************************************************************************/
   let entry = {};
-  entry['lib'] = ["jquery", "popper.js", "bootstrap", "moment", "lodash"];
+  entry['lib'] = ["jquery", "popper.js", "bootstrap", "moment", "lodash", "reactstrap"];
   entry['index'] = [path.join(__dirname, 'src', 'index.jsx')];
   entry = {
     ...entry
