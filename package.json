@@ -1,6 +1,6 @@
 {
   "name": "@nebulario/dll-vendor",
-  "version": "1.0.0-hoist-dev-init-dev",
+  "version": "1.0.0-hoist-dev-init-prod",
   "mountpoint": "vendor",
   "description": "Base for modules in node",
   "repository": "github.com:vicjicaman/dll-vendor.git",
